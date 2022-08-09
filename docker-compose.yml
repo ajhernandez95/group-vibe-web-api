@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+ web:
+  image: nextjs-docker-dev
+  build: .
+  ports:
+   - 3000:3000
+  volumes:
+   - ./:/app
+   - /app/node_modules
+   - /app/.next
+
+#  docker-compose up --build --force-recreate --remove-orphans

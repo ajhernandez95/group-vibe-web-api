@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+ web:
+  image: nextjs-docker
+  build:
+    dockerfile: Dockerfile.production
+  ports:
+   - 3000:3000
+
+# Docker Production Deploy Command docker-compose -f docker-compose.production.yml up --build --force-recreate --remove-orphans
+# Heroku CLI Production Deploy Command: git push heroku main
+# Run this command if Heroku build limit is reached: heroku restart
